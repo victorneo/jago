@@ -14,14 +14,19 @@ the original audio code generation works.
 
 ## Building
 
-In the future, I plan to allow Jago to be built using Gradle. For the moment, I
-am using Eclipse, which the original built-in `.jardesc` file is created with.
+Gradle is used to generate the JAR file to run Jago. Assuming that you have the
+JDK installed, the following command will build the project and its the JAR
+file.
 
-Build Steps:
+```
+./gradlew build
+```
 
-- Open the jago directory in Eclipse
-- Double-click on `jagoclient.jardesc` file, and set `Go.java` to be the main file. If it doesn't work, use `jagoclient.Go` instead.
-- Jar will show up in your `<eclipse workspace>/build/jago.jar`
+To run Jago, use the following command:
+
+```
+java -jar java -jar build/libs/jago.jar
+```
 
 ## Credits
 
