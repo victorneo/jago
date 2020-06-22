@@ -339,7 +339,7 @@ public class InfoDialog extends CloseDialog implements ItemListener
 
 	public String clear (String s)
 	{
-		s = s.replace('ง', ' ');
+		s = s.replace('ยง', ' ');
 		s = s.replaceAll("__", "");
 		return s;
 	}

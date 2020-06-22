@@ -8,7 +8,7 @@ import java.util.Enumeration;
 import rene.gui.*;
 import rene.util.*;
 
-/**
+/*
 An extended Version of the Viewer. It is able to reformat lines, when
 the area is resized. It has no vertical scrollbar. Text is stored into
 a separate string buffer, and will be formatted on repaint.
@@ -321,7 +321,7 @@ public class ExtendedViewer extends Viewer
 		f.setSize(300,300);
 		f.setVisible(true);
 		v.append("test1 test test test test test test ");
-		v.append("Donaudampfschifffahrtsgesellschaftskapitän ");
+		v.append("DonaudampfschifffahrtsgesellschaftskapitÃ¤n ");
 		v.append("test2 test test test test test test ");
 		v.append("test3 test test test test test test ");
 		v.append("test4 test test test test test test ");
