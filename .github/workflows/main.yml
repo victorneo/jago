@@ -27,9 +27,10 @@ jobs:
           release: 18
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
-        run: gradle wrapper
       - name: Run build with Gradle Wrapper
-        run: ./gradlew build
+        run:
+          - gradle wrapper
+          - ./gradlew build
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
