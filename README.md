@@ -8,7 +8,7 @@ Jago was one of the first few Go clients that I have been using many years back
 while learning Go, and I plan on doing periodic updates to it so that it can
 continue to run for as long as Java supports it.
 
-The current codebase supports _JDK 14_, but with the removal of audio code that
+The current codebase supports _JDK 18_, but with the removal of audio code that
 uses the `sun` packages. I plan to add it back someday, if I can figure out how
 the original audio code generation works.
 
@@ -25,7 +25,7 @@ file.
 To run Jago, use the following command:
 
 ```
-java -jar java -jar build/libs/jago.jar
+java -jar build/libs/jago.jar
 ```
 
 ## Credits
