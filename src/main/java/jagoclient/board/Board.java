@@ -1,6 +1,7 @@
 package jagoclient.board;
 
 import jagoclient.Global;
+import jagoclient.sound.JagoSound;
 
 import java.awt.Canvas;
 import java.awt.Color;
@@ -566,6 +567,7 @@ public class Board extends Canvas implements MouseListener,
 					if (GF.blocked() && Pos.isLastMain()) return;
 					movemouse(i, j);
 				}
+                JagoSound.play("stone");
 				break;
 		}
 		showinformation();
