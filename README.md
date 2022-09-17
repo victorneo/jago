@@ -1,6 +1,6 @@
 # Jago
 
-This is a fork of the original [Jago client][1]. The purpose of this project is
+This is a fork of the original [Jago client][1] version 6.2. The purpose of this project is
 to ensure that the Jago client builds cleanly on the latest JDK versions, so
 that we can continue to use Jago on modern systems.
 
@@ -50,4 +50,4 @@ You should have received a copy of the GNU General Public License along with
 this program.  If not, see https://www.gnu.org/licenses/.
 
 
-[1]: http://www.rene-grothmann.de/jago/
+[1]: http://jagoclient.sourceforge.net/

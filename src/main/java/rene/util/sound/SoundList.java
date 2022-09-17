@@ -101,10 +101,7 @@ public class SoundList implements Runnable
 		String Sounds[]={"high","message","click","stone","wip","yourmove","game"};
 		rene.gui.CloseFrame F=new rene.gui.CloseFrame()
 			{	public void doAction (String o)
-				{	if (Global.getJavaVersion()>=1.3)
-						L.play("/jagoclient/au/"+o+".wav");
-					else
-						L.play("/jagoclient/au/"+o+".au");
+				        L.play("/jagoclient/au/"+o+".wav");
 				}
 				public void doclose ()
 				{	System.exit(0);

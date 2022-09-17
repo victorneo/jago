@@ -19,9 +19,7 @@ public class JagoSound
 		if (Global.getParameter("simplesound", true)) file = simplefile;
 		if (file.equals("")) return;
 		if (SL.busy()) return;
-		if (Global.getJavaVersion() >= 1.3)
-			SL.play("/jagoclient/au/" + file + ".wav");
-		else SL.play("/jagoclient/au/" + file + ".au");
+		SL.play("/jagoclient/au/" + file + ".wav");
 	}
 
 	static public void play (String file)
