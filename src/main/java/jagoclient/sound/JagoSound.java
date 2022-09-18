@@ -10,16 +10,16 @@ public class JagoSound
     static synchronized public void play (String file, String simplefile,
         boolean beep)
     {
-        //if (Global.getParameter("nosound", true)) return;
-        //if (Global.getParameter("beep", true))
-        //{
-        //    if (beep) SoundList.beep();
-        //    return;
-        //}
-        //if (Global.getParameter("simplesound", true)) file = simplefile;
+        if (Global.getParameter("nosound", true)) return;
+        if (Global.getParameter("beep", true))
+        {
+            if (beep) SoundList.beep();
+            return;
+        }
+        if (Global.getParameter("simplesound", true)) file = simplefile;
         if (file.equals("")) return;
         if (SL.busy()) return;
-        SL.play("/" + file + ".wav");
+        SL.play("/sounds/" + file + ".wav");
     }
 
     static public void play (String file)

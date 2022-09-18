@@ -77,7 +77,7 @@ public class Sound13 implements Sound
     }
     public static void main (String args[])
     {
-        Sound13 s=new Sound13("/jagoclient/au/message.wav");
+        Sound13 s=new Sound13("/sounds/message.wav");
         s.start();
         s.start();
         System.exit(0);

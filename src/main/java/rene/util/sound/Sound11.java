@@ -82,7 +82,7 @@ public class Sound11 implements Sound
 
     public static void main (String args[])
     {
-        Sound11 s = new Sound11("/jagoclient/au/message.au");
+        Sound11 s = new Sound11("/sounds/message.au");
         s.start();
         s.start();
         try
