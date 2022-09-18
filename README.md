@@ -1,5 +1,7 @@
 # Jago
 
+![screenshot](https://github.com/victorneo/jago/blob/master/screenshot.png?raw=true)
+
 This is a fork of the original [Jago client][1] version 6.2. The purpose of this project is
 to ensure that the Jago client builds cleanly on the latest JDK versions, so
 that we can continue to use Jago on modern systems.
