@@ -101,7 +101,7 @@ public class SoundList implements Runnable
         rene.gui.CloseFrame F=new rene.gui.CloseFrame()
             {   public void doAction (String o)
                 {
-                        L.play("/jagoclient/au/"+o+".wav");
+                        L.play("/sounds/"+o+".wav");
                 }
                 public void doclose ()
                 {   System.exit(0);

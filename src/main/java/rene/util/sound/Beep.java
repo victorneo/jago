@@ -1,17 +1,17 @@
 package rene.util.sound;
 
 import java.io.*;
+import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
-
-// TODO Replace sun package
-// import sun.audio.*;
+import javax.sound.sampled.DataLine;
+import javax.sound.sampled.SourceDataLine;
 
 public class Beep
 {
     byte B[];
     AudioInputStream A;
+    AudioFormat AFormat;
 
     public Beep ()
     {
@@ -50,13 +50,12 @@ public class Beep
                         * Math.sin(i / 8000.0 * 2 * Math.PI * 2 * frequ) + 0.1
                         * Math.sin(i / 8000.0 * 2 * Math.PI * 3 * frequ));
             }
-            DataInputStream in = new DataInputStream(new ByteArrayInputStream(
-                B, 0, Offset + Length));
-
-            // TODO Replace sun package
-            // @SuppressWarnings("resource") AudioStream as = new AudioStream(in);
-            // AudioData Data = as.getData();
-            // A = new AudioDataStream(Data);
+            InputStream in = new ByteArrayInputStream(B);
+            AudioInputStream audio = AudioSystem.getAudioInputStream(in);
+            AFormat = audio.getFormat();
+            B = new byte[audio.available()];
+            audio.read(B);
+            audio.close();
         }
         catch (Exception e)
         {
@@ -66,9 +65,19 @@ public class Beep
 
     public void play ()
     {
-        // TODO Replace sun package
-        // A.reset();
-        // AudioPlayer.player.start(A);
+        try
+        {
+            DataLine.Info info=new DataLine.Info(SourceDataLine.class,AFormat);
+            SourceDataLine line=(SourceDataLine)AudioSystem.getLine(info);
+            line.open(AFormat);
+            line.start();
+            line.write(B,0,B.length);
+            line.drain();
+            line.close();
+        }
+        catch (Exception e)
+        {   System.out.println(e);
+        }
     }
 
     public void store (byte b[], int pos, double value)
