@@ -151,6 +151,7 @@ public class Global
 		}
 		catch (RuntimeException e)
 		{
+            e.printStackTrace();
 			B = null;
 		}
 	}

@@ -67,9 +67,9 @@ public class Global extends rene.gui.Global
 		WindowList = new Hashtable();
 		Dir = "";
 		Home = "";
-		initBundle("jagoclient/foreign/JagoResource");
-		if (B == null) initBundle("jagoclient/JagoResource");
-		if (B == null) initBundle("JagoResource");
+		initBundle("jagoclient/foreign/JagoResource", false);
+		//if (B == null) initBundle("jagoclient/JagoResource");
+		//if (B == null) initBundle("JagoResource");
 	}
 
 	/** load the message filters */

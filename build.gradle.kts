@@ -36,6 +36,15 @@ tasks.jar {
     }
 }
 
+sourceSets {
+        main {
+            resources {
+                srcDirs("src")
+            }
+        }
+}
+
+
 application {
     // Define the main class for the application.
     mainClass.set("Go")
