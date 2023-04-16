@@ -67,7 +67,7 @@ public class Global extends rene.gui.Global
 		WindowList = new Hashtable();
 		Dir = "";
 		Home = "";
-		initBundle("jagoclient/foreign/JagoResource");
+		initBundle("foreign/JagoResource");
 		if (B == null) initBundle("jagoclient/JagoResource");
 		if (B == null) initBundle("JagoResource");
 	}
@@ -164,7 +164,7 @@ public class Global extends rene.gui.Global
 				lang = lang.substring(0, 2);
 			}
 			Locale.setDefault(new Locale(lang, langsec));
-			initBundle("jagoclient/foreign/JagoResource");
+			initBundle("foreign/JagoResource");
 			if (B == null) initBundle("jagoclient/JagoResource");
 			if (B == null) initBundle("JagoResource");
 		}

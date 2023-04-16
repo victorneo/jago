@@ -135,7 +135,7 @@ public class CloseFrame extends Frame implements WindowListener,
 			{
 				Image i;
 				InputStream in = getClass().getResourceAsStream(
-					"/jagoclient/gifs/" + file);
+					"/gifs/" + file);
 				int pos = 0;
 				int n = in.available();
 				byte b[] = new byte[20000];

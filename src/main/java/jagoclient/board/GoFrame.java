@@ -911,7 +911,7 @@ public class GoFrame extends CloseFrame implements FilenameFilter, KeyListener,
 	{
 		Global.setParameter("iconsize", 32);
 		IconBar I = new IconBar(this);
-		I.Resource = "/jagoclient/icons/";
+		I.Resource = "/icons/";
 		I.addLeft("undo");
 		I.addSeparatorLeft();
 		I.addLeft("allback");
