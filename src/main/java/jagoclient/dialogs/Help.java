@@ -49,7 +49,7 @@ public class Help extends CloseFrame implements Runnable
 			String s;
 			try
 			{
-				in = Global.getEncodedStream("jagoclient/helptexts/" + subject
+				in = Global.getEncodedStream("helptexts/" + subject
 					+ Global.resourceString("HELP_SUFFIX") + ".txt");
 				s = in.readLine();
 			}
@@ -63,7 +63,7 @@ public class Help extends CloseFrame implements Runnable
 				}
 				catch (Exception ex)
 				{
-					in = Global.getEncodedStream("jagoclient/helptexts/"
+					in = Global.getEncodedStream("helptexts/"
 						+ subject + ".txt");
 					s = in.readLine();
 				}

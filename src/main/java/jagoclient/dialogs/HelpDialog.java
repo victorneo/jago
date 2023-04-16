@@ -41,7 +41,7 @@ public class HelpDialog extends CloseDialog
 			String s;
 			try
 			{
-				in = Global.getStream("jagoclient/helptexts/" + subject
+				in = Global.getStream("helptexts/" + subject
 					+ Global.resourceString("HELP_SUFFIX") + ".txt");
 				s = in.readLine();
 			}
@@ -55,7 +55,7 @@ public class HelpDialog extends CloseDialog
 				}
 				catch (Exception ex)
 				{
-					in = Global.getStream("jagoclient/helptexts/" + subject
+					in = Global.getStream("helptexts/" + subject
 						+ ".txt");
 					s = in.readLine();
 				}

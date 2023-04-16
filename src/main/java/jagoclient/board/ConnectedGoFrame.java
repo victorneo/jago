@@ -363,7 +363,7 @@ public class ConnectedGoFrame extends GoFrame
 	public IconBar createIconBar ()
 	{
 		IconBar I = new IconBar(this);
-		I.Resource = "/jagoclient/icons/";
+		I.Resource = "/icons/";
 		I.addLeft("undo");
 		addSendForward(I);
 		I.addSeparatorLeft();

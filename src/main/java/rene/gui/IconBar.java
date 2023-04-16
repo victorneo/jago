@@ -296,8 +296,12 @@ class BasicIcon extends Panel implements MouseListener, IconBarElement,
 			Thread.sleep(1000);
 		}
 		catch (Exception e)
-		{}
-		if ( !T.isInterrupted())
+		{
+		}
+		if (T == null) {
+			return;
+		}
+		if (!T.isInterrupted())
 		{
 			synchronized (this)
 			{
@@ -341,6 +345,9 @@ class BasicIcon extends Panel implements MouseListener, IconBarElement,
 	 */
 	public synchronized void mouseExited (MouseEvent e)
 	{
+		if (T == null) {
+			return;
+		}
 		T.interrupt();
 		T = null;
 		MouseOver = false;
